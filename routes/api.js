@@ -3,6 +3,6 @@ var recordRouter = require("./record");
 
 var app = express();
 
-app.use("/record/", recordRouter);
+app.use("/records/", recordRouter);
 
 module.exports = app;
