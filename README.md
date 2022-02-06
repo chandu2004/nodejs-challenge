@@ -1,12 +1,12 @@
 # Nodejs Challenge
 
 
-### Using Git (recommended)
+### How to install
 
 1.  Clone the project from github. Change "myproject" to your project name.
 
 ```bash
-git clone https://github.com/ ./myproject
+git clone https://github.com/chandu2004/nodejs-challenge.git ./myproject
 ```
 
 ### Install npm dependencies after installing
@@ -23,7 +23,7 @@ npm install
     ```bash
     cp .env.example .env
     ```
-3.  Change the values of the file to your environment.
+3.  Change the value of the property MONGODB_URL in env file.
 
 ## How to run
 
@@ -35,7 +35,7 @@ npm run dev
 
 ## Tests
 
-### Running Test Cases
+### Running Tests
 
 ```bash
 npm test
