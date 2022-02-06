@@ -20,6 +20,9 @@ Invoke API using CURL (POST Request):
 curl --header "Content-Type: application/json" -d "{\"startDate\":\"2016-01-26\", \"endDate\":\"2018-02-02\", \"minCount\": 2700, \"maxCount\": 3000}" https://agile-bayou-42532.herokuapp.com/api/records
 ```
 
+### Code Coverage
+![alt text](https://github.com/chandu2004/nodejs-challenge/blob/master/public/code_coverage.png?raw=true)
+
 
 ## Local setup
 
