@@ -1,18 +1,40 @@
-# Nodejs Challenge
+# Coding Challenge
 
+REST API to fetch and filter the data from MongoDB based on request parameters
+
+## Live URL (Deployed to Heroku):
+
+```bash
+Home URL: https://agile-bayou-42532.herokuapp.com/
+API Endpoint: https://agile-bayou-42532.herokuapp.com/api/records
+```
+
+## How to Test the API
+
+Sample Request Body:
+```bash
+{ "startDate": "2016-01-26", "endDate": "2018-02-02", "minCount": 2700, "maxCount": 3000 }
+```
+Invoke API using CURL (POST Request):
+```bash
+curl --header "Content-Type: application/json" -d "{\"startDate\":\"2016-01-26\", \"endDate\":\"2018-02-02\", \"minCount\": 2700, \"maxCount\": 3000}" https://agile-bayou-42532.herokuapp.com/api/records
+```
+
+
+## Local setup
 
 ### How to install
 
-1.  Clone the project from github. Change "myproject" to your project name.
+1.  Clone the project from github
 
 ```bash
-git clone https://github.com/chandu2004/nodejs-challenge.git ./myproject
+git clone https://github.com/chandu2004/nodejs-challenge.git
 ```
 
 ### Install npm dependencies after installing
 
 ```bash
-cd myproject
+cd nodejs-challenge
 npm install
 ```
 
@@ -31,6 +53,13 @@ npm install
 
 ```bash
 npm run dev
+```
+
+This will launch the server on http://localhost:3000
+
+```bash
+URL: http://localhost:3000
+Endpoint: http://localhost:3000/api/records
 ```
 
 ## Tests
