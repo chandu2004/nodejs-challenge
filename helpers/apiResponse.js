@@ -1,11 +1,3 @@
-exports.successResponse = function (res, msg) {
-	var data = {
-		code: 0,
-		msg: msg,
-	};
-	return res.status(200).json(data);
-};
-
 exports.successResponseWithData = function (res, msg, data) {
 	var resData = {
 		code: 0,
@@ -38,12 +30,4 @@ exports.validationErrorWithData = function (res, msg, data) {
 		errors: data,
 	};
 	return res.status(400).json(resData);
-};
-
-exports.unauthorizedResponse = function (res, msg) {
-	var data = {
-		code: 4,
-		msg: msg,
-	};
-	return res.status(401).json(data);
 };
