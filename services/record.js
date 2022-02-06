@@ -10,33 +10,33 @@ const Record = require("../models/Record");
  */
 
 module.exports.getFilteredRecords = ({
-  startDate,
-  endDate,
-  minCount,
-  maxCount,
+	startDate,
+	endDate,
+	minCount,
+	maxCount,
 }) =>
-  Record.aggregate([
-    {
-      $match: {
-        createdAt: { $lte: new Date(endDate), $gte: new Date(startDate) },
-      },
-    },
-    {
-      $addFields: {
-        totalCount: { $sum: "$counts" },
-      },
-    },
-    {
-      $match: {
-        totalCount: { $gte: minCount, $lte: maxCount },
-      },
-    },
-    {
-      $project: {
-        _id: 0,
-        key: 1,
-        createdAt: 1,
-        totalCount: 1,
-      },
-    },
-  ]);
+	Record.aggregate([
+		{
+			$match: {
+				createdAt: { $lte: new Date(endDate), $gte: new Date(startDate) },
+			},
+		},
+		{
+			$addFields: {
+				totalCount: { $sum: "$counts" },
+			},
+		},
+		{
+			$match: {
+				totalCount: { $gte: minCount, $lte: maxCount },
+			},
+		},
+		{
+			$project: {
+				_id: 0,
+				key: 1,
+				createdAt: 1,
+				totalCount: 1,
+			},
+		},
+	]);
